@@ -52,12 +52,11 @@ class Tree {
 		addLeaves(root, numsCatalogue);
 		AssemblyPerms(root, StartVec);
 	}
-	std::vector<char> getOrderedPerm(int n) {
+	std::vector<char> getOrderedPerm(int n) const {
 		if (n - 1 > permutations.size()) {
 			return std::vector<char>();
 		}
 		return permutations[n - 1];
 	}
-
 };
 #endif  // INCLUDE_TREE_H_
