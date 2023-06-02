@@ -7,7 +7,7 @@ struct Node {
     char number;
 };
 class Tree {
-private:
+ private:
     Node* root;
     std::vector<std::vector<char>> permutations;
     std::vector<char> numsCatalogue;
@@ -29,7 +29,6 @@ private:
             }
             addLeaves(child, nextVec);
         }
-
     }
     void AssemblyPerms(Node* root, std::vector<char> current) {
         if (root->number) {
@@ -44,8 +43,8 @@ private:
         }
     }
 
-public:
-    Tree(std::vector<char>& numbers) {
+ public:
+    explicit Tree(const std::vector<char>& numbers) {
         numsCatalogue = numbers;
         std::vector<char> StartVec;
         root = new Node;
